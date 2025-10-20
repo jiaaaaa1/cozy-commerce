@@ -19,10 +19,9 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'OK', message: 'Commerce Central API is running!' });
 });
 
-// We'll add more routes later
-// app.use('/api/auth', require('./routes/auth'));
-// app.use('/api/stores', require('./routes/stores'));
-// app.use('/api/products', require('./routes/products'));
+// Routes
+app.use('/api/auth', require('./routes/auth'));
+app.use('/api/stores', require('./routes/stores'));
 
 // Error handling
 app.use((err, req, res, next) => {
